@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey</title>
+</head>
+<body>
+    <form action="/form filled" method="post">
+    <table align="center" border="1">
+        <tr>
+            <h1 align="center">Survey Form</h1>
+        </tr>
+        <tr align="center">
+            <td colspan="3"><input type="text" id="name" placeholder="Enter your name"></td>
+        </tr>
+        <tr align="center">
+            <td colspan="3"><input type="number" id="age" placeholder="Enter your age"></td>
+        </tr>
+        <tr align="center">
+            <td colspan="3"><input type="number" id="aadhar" placeholder="Enter Aadhar Number"></td>
+        </tr>
+        <tr align="center">
+            <td colspan="3"><label id="query1">What is your opinion about COVID-19 Vaccine?</label></td> 
+        </tr>
+        <tr align="center">
+            <td colspan="3"><textarea for="query1"></textarea></td>
+        </tr>
+        <tr align="center">
+            <td colspan="3"><label for="affected">Have you been affected by Covid?</label></td>
+        </tr>
+        <tr>
+            <td><input type="radio" id="Yes" name="affected"><label for="Yes">Yes</label></td>
+            <td><input type="radio" id="No" name="affected"><label for="No">No</label></td>
+        </tr>
+        <tr align="center">
+            <td colspan="3"><label for="prevention">Have you taken any preventive measures against Covid-19?</label></td>
+        </tr>
+        <tr>
+            <td><input type="radio" id="cova" name="prevention" value="Covaccine"><label for="cova">Covaccine</label></td>
+            <td><input type="radio" id="covi" name="prevention" value="Covishield"><label for="covishield">Covishield</label></td>
+            <td><input type="radio" id="none" name="prevention" value="none"><label for="none">No</label></td>
+        </tr>
+        <tr align="center">
+            <td colspan="3"><label for="file">If Yes , Upload the Certificate.</label></td>
+        </tr>
+        <tr align="center">
+            <td colspan="3"><input type="file"></td>
+        </tr>
+        <tr align="center">
+            <td colspan="3"><button>Submit</button></td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>
