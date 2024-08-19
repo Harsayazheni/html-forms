@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .chat-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        .chat-header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+        }
+        .chat-messages {
+            height: 300px;
+            overflow-y: scroll;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            margin-bottom: 20px;
+        }
+        .chat-messages p {
+            margin: 0;
+            padding: 8px 10px;
+            border-radius: 8px;
+            background-color: #e9ecef;
+            margin-bottom: 10px;
+        }
+        .chat-input {
+            display: flex;
+            justify-content: space-between;
+        }
+        .chat-input input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+        .chat-input input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .chat-input input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="chat-container">
+    <div class="chat-header">
+        <h2>Chat Room</h2>
+    </div>
+    <div class="chat-messages">
+        <p>User1: Hello!</p>
+        <p>User2: Hi, how are you?</p>
+    </div>
+    <form action="/submit_chat" method="post" class="chat-input">
+        <input type="text" id="message" name="message" placeholder="Type your message..." required>
+        <input type="submit" value="Send">
+    </form>
+</div>
+
+</body>
+</html>

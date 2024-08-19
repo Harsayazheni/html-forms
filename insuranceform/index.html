@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Form</title>
+</head>
+<body align="center" bgcolor="lightpink">
+    <h2>Insurance Application Form</h2>
+    <form action="/submit_insurance" method="post">
+        <label for="name">Full Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="dob">Date of Birth:</label><br>
+        <input type="date" id="dob" name="dob" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="phone">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone" required><br><br>
+
+        <label for="address">Address:</label><br>
+        <textarea id="address" name="address" rows="4" cols="50" placeholder="Your address here..." required></textarea><br><br>
+
+        <label for="insurance_type">Type of Insurance:</label><br>
+        <select id="insurance_type" name="insurance_type" required>
+            <option value="health">Health Insurance</option>
+            <option value="life">Life Insurance</option>
+            <option value="auto">Auto Insurance</option>
+            <option value="home">Home Insurance</option>
+        </select><br><br>
+
+        <label for="policy_amount">Policy Amount:</label><br>
+        <input type="number" id="policy_amount" name="policy_amount" min="1000" required><br><br>
+
+        <label for="beneficiary">Beneficiary Name:</label><br>
+        <input type="text" id="beneficiary" name="beneficiary" required><br><br>
+
+        <label for="comments">Additional Comments:</label><br>
+        <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Any additional comments..."></textarea><br><br>
+
+        <input type="submit" value="Submit Application">
+    </form>
+</body>
+</html>
