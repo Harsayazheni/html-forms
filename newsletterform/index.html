@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter Subscription Form</title>
+</head>
+<body align="center" bgcolor="bisque">
+    <h2>Subscribe to Our Newsletter</h2>
+    <form action="/submit_newsletter" method="post">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="frequency">How often would you like to receive our newsletter?</label><br>
+        <select id="frequency" name="frequency" required>
+            <option value="weekly">Weekly</option>
+            <option value="biweekly">Bi-Weekly</option>
+            <option value="monthly">Monthly</option>
+        </select><br><br>
+
+        <input type="checkbox" id="consent" name="consent" required>
+        <label for="consent">I agree to receive marketing communications and newsletters</label><br><br>
+
+        <input type="submit" value="Subscribe">
+    </form>
+</body>
+</html>

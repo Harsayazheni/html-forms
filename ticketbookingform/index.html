@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Form</title>
+</head>
+<body align="center" bgcolor="ivory">
+    <h2>Booking Form</h2>
+    <form action="/submit_booking" method="post">
+        <label for="name">Full Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="phone">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone" required><br><br>
+
+        <label for="booking_type">Booking Type:</label><br>
+        <select id="booking_type" name="booking_type" required>
+            <option value="train">Train</option>
+            <option value="flight">Flight</option>
+            <option value="bus">Bus</option>
+        </select><br><br>
+
+        <div id="train_details" class="booking_details">
+            <h3>Train Booking Details</h3>
+            <label for="train_number">Train Number:</label><br>
+            <input type="text" id="train_number" name="train_number"><br><br>
+
+            <label for="departure_date">Departure Date:</label><br>
+            <input type="date" id="departure_date" name="departure_date"><br><br>
+
+            <label for="seat_class">Seat Class:</label><br>
+            <select id="seat_class" name="seat_class">
+                <option value="sleeper">Sleeper</option>
+                <option value="second_class">Second Class</option>
+                <option value="first_class">First Class</option>
+            </select><br><br>
+        </div>
+
+        <div id="flight_details" class="booking_details">
+            <h3>Flight Booking Details</h3>
+            <label for="flight_number">Flight Number:</label><br>
+            <input type="text" id="flight_number" name="flight_number"><br><br>
+
+            <label for="departure_date">Departure Date:</label><br>
+            <input type="date" id="departure_date" name="departure_date"><br><br>
+
+            <label for="seat_class">Seat Class:</label><br>
+            <select id="seat_class" name="seat_class">
+                <option value="economy">Economy</option>
+                <option value="business">Business</option>
+                <option value="first_class">First Class</option>
+            </select><br><br>
+        </div>
+
+        <div id="bus_details" class="booking_details">
+            <h3>Bus Booking Details</h3>
+            <label for="bus_number">Bus Number:</label><br>
+            <input type="text" id="bus_number" name="bus_number"><br><br>
+
+            <label for="departure_date">Departure Date:</label><br>
+            <input type="date" id="departure_date" name="departure_date"><br><br>
+
+            <label for="seat_class">Seat Class:</label><br>
+            <select id="seat_class" name="seat_class">
+                <option value="economy">Economy</option>
+                <option value="luxury">Luxury</option>
+            </select><br><br>
+        </div>
+
+        <input type="submit" value="Book Now">
+    </form>
+
+    <script>
+        document.getElementById('booking_type').addEventListener('change', function() {
+            var type = this.value;
+            var details = document.querySelectorAll('.booking_details');
+            details.forEach(function(detail) {
+                detail.style.display = 'none';
+            });
+            document.getElementById(type + '_details').style.display = 'block';
+        });
+
+        // Set default to hide all details and show the selected type
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('booking_type').dispatchEvent(new Event('change'));
+        });
+    </script>
+</body>
+</html>

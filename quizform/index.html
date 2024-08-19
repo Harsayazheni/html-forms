@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Form</title>
+</head>
+<body align="center" bgcolor="azure">
+    <h2>Quiz Form</h2>
+    <form action="/submit_quiz" method="post">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="q1">1. What is the capital of France?</label><br>
+        <input type="radio" id="paris" name="q1" value="Paris" required>
+        <label for="paris">Paris</label><br>
+        <input type="radio" id="london" name="q1" value="London">
+        <label for="london">London</label><br>
+        <input type="radio" id="berlin" name="q1" value="Berlin">
+        <label for="berlin">Berlin</label><br><br>
+
+        <label for="q2">2. Which planet is known as the Red Planet?</label><br>
+        <input type="radio" id="mars" name="q2" value="Mars" required>
+        <label for="mars">Mars</label><br>
+        <input type="radio" id="jupiter" name="q2" value="Jupiter">
+        <label for="jupiter">Jupiter</label><br>
+        <input type="radio" id="venus" name="q2" value="Venus">
+        <label for="venus">Venus</label><br><br>
+
+        <label for="q3">3. Who wrote 'Romeo and Juliet'?</label><br>
+        <input type="radio" id="shakespeare" name="q3" value="William Shakespeare" required>
+        <label for="shakespeare">William Shakespeare</label><br>
+        <input type="radio" id="dickens" name="q3" value="Charles Dickens">
+        <label for="dickens">Charles Dickens</label><br>
+        <input type="radio" id="austen" name="q3" value="Jane Austen">
+        <label for="austen">Jane Austen</label><br><br>
+
+        <label for="q4">4. What is the largest ocean on Earth?</label><br>
+        <input type="radio" id="pacific" name="q4" value="Pacific Ocean" required>
+        <label for="pacific">Pacific Ocean</label><br>
+        <input type="radio" id="atlantic" name="q4" value="Atlantic Ocean">
+        <label for="atlantic">Atlantic Ocean</label><br>
+        <input type="radio" id="indian" name="q4" value="Indian Ocean">
+        <label for="indian">Indian Ocean</label><br><br>
+
+        <input type="submit" value="Submit Quiz">
+    </form>
+</body>
+</html>
